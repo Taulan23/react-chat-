@@ -1,0 +1,175 @@
+header {
+  height: 150px;
+  color: white;
+  background-color: #141214;
+  display: flex;
+  justify-content: space-between;
+}
+#header-section {
+  width: 33%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.header-left-section {
+  justify-content: flex-start;
+}
+.header-central-section {
+  justify-content: center;
+}
+.header-right-section {
+  justify-content: flex-end;
+}
+#header-icon {
+  font-size: 30px;
+  margin: 0 30px 0 30px;
+  color: white;
+  transition: color 0.25s ease-in-out, transform 0.4s ease-in-out;
+}
+#header-icon:hover {
+  color: #8f8b8f;
+}
+#header-icon:active {
+  transform: scale(0.9);
+}
+#messenger-name {
+  font-size: 36px;
+}
+.header-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: white;
+}
+#header-back-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: white;
+}
+#person {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+#person-photo {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 100%;
+}
+#person-name-status {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+}
+#person-name {
+  font-size: 24px;
+  width: max-content;
+  margin-bottom: 8px;
+}
+#person-status {
+  font-size: 16px;
+  color: #8f8b8f;
+}
+#header-chat-icons-right{
+  display: flex
+}
+
+@media (max-width: 900px) {
+  #header-icon {
+    margin: 0 20px 0 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    height: 100px;
+  }
+  #header-icon {
+    font-size: 25px;
+    margin: 0 15px 0 15px; 
+  }
+  #messenger-name {
+    font-size: 28px;
+  }
+  #person-photo {
+    width: 70px;
+    height: 70px;
+  }
+  #person-name {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  #person-status {
+    font-size: 14px;
+  }
+  #person-name-status {
+    margin-left: 10px;
+  }
+}
+@media (max-width: 400px) {
+  #header-icon {
+    margin: 0 5px 0 5px; 
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.edit-profile-title {
+  text-align: center;
+  position: relative;
+}
+
+.save-message {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #4CAF50;
+  font-size: 14px;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.search-container input {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 200px;
+    opacity: 1;
+  }
+}
+

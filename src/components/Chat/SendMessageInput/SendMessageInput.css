@@ -1,0 +1,61 @@
+#send-message-form {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 10px;
+  background-color: #f0f0f0;
+  position: fixed;
+  bottom: 0;
+  z-index: 1000;
+}
+#send-message-input {
+  flex: 1;
+  background-color: #f0f0f0;
+  color: #000;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+  margin-right: 10px;
+}
+#send-message-button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
+  transition: color 0.15s ease-in-out, transform 0.4s ease-in-out;
+}
+#send-message-button:hover {
+  color: #8f8b8f;
+}
+#send-message-button:active {
+  transform: scale(0.9);
+}
+@media (max-width: 900px) {
+  
+}
+
+@media (max-width: 600px) {
+  #send-message-input {
+    font-size: 14px;
+  }
+  #send-message-button {
+    font-size: 14px;
+  }
+}
+@media (max-width: 400px) {
+  #send-message-input {
+    font-size: 12px;
+  }
+  #send-message-button {
+    font-size: 12px;
+  }
+}
+

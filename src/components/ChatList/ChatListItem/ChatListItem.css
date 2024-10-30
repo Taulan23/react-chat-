@@ -1,0 +1,71 @@
+#chat-list-item {
+  color: white;
+  background-color: #141214;
+  margin: 20px 20px 0 20px;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-radius: 20px;
+}
+
+#chat-list-item-info-avatar {
+  display: flex;
+  align-items: center;
+}
+
+#chat-list-item-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#chat-list-item-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  width: 70%;
+}
+
+#delete-chat-div {
+  display: flex;
+  align-items: center;
+}
+
+#delete-chat {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: flex;
+  transition: color 0.15s ease-in-out, transform 0.4s ease-in-out;
+}
+#delete-chat:hover {
+  color: #8f8b8f;
+}
+#delete-chat:active {
+  transform: scale(0.75);
+}
+
+#last-message-time-chat-list-item {
+  color: #8f8b8f;
+  font-size: 14px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+@media (max-width: 900px) {
+}
+@media (max-width: 600px) {
+  
+}
+@media (max-width: 400px) {
+}
+

@@ -1,0 +1,8 @@
+#edit-profile-photo{
+    border-radius: 50%;
+    margin-top: 30px;
+    object-fit: cover; 
+}
+.edit-profile-photo{
+    margin-top: 20px;
+}

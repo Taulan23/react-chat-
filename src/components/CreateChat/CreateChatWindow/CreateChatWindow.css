@@ -1,0 +1,93 @@
+#create-new-chat {
+  box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  width: 50%;
+  box-sizing: border-box;
+  height: 400px;
+  position: absolute;
+  top: 200px;
+  left: 25%;
+  padding: 20px;
+  z-index: 1100;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#add-new-user-title{
+  font-size: 32px;
+}
+#create-new-chat-form {
+  align-items: end;
+  height: 280px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+}
+#new-user-name-input {
+  flex: 1;
+  background-color: #f0f0f0;
+  color: #000;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+  margin-right: 10px;
+  height: 30px;
+  width: 70%;
+}
+#cancellation-create-new-chat {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  height: 30px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: color 0.15s ease-in-out, transform 0.4s ease-in-out;
+}
+#cancellation-create-new-chat:hover {
+  color: #8f8b8f;
+}
+#cancellation-create-new-chat:active {
+  transform: scale(0.9);
+}
+@media (max-width: 900px) {
+  #add-new-user-title{
+    font-size: 28px;
+  }
+  #create-new-chat {
+    width: 60%;
+    left: 20%;
+  }
+  
+}
+@media (max-width: 600px) {
+  #add-new-user-title{
+    font-size: 24px;
+  }
+  #create-new-chat {
+    width: 70%;
+    left: 15%;
+  }
+  
+}
+@media (max-width: 400px) {
+  #add-new-user-title{
+    font-size: 20px;
+  }
+  #create-new-chat {
+    width: 80%;
+    left: 10%;
+  }
+}
+

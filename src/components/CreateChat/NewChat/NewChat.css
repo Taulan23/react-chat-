@@ -1,0 +1,14 @@
+#new-chat {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+#new-user-avatar {
+  height: 100px;
+  width: 100px;
+}
+.new-chat-info {
+  margin-left: 20px;
+}
+
