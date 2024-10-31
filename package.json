@@ -2,7 +2,7 @@
   "name": "react-chat",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://taulan23.github.io/react-chat-",
+  "homepage": "https://Gevork-Sarkisyan.github.io/chat-app-client",
   "type": "module",
   "scripts": {
     "dev": "vite",

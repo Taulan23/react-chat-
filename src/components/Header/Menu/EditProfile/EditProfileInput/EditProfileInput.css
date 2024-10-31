@@ -1,28 +1,39 @@
-.input-group {
-  margin-bottom: 15px;
+.edit-profile-input-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
 }
 
-.input-group label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: 500;
-  color: #333;
-}
-
-.input-group input {
-  width: 100%;
-  padding: 8px 12px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+.edit-profile-input-title {
+  color: #707579;
   font-size: 14px;
-  transition: border-color 0.2s;
+  margin-bottom: 8px;
 }
 
-.input-group input:focus {
+.edit-profile-input {
+  background: #F4F4F5;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 16px;
+  color: #000000;
+  width: 100%;
+}
+
+.edit-profile-input::placeholder {
+  color: #707579;
+}
+
+.edit-profile-input:focus {
   outline: none;
-  border-color: #0088cc;
 }
 
-.input-group input::placeholder {
-  color: #999;
+.edit-profile-input.error {
+  background: rgba(255, 77, 79, 0.1);
+}
+
+.error-message {
+  color: #ff4d4f;
+  font-size: 12px;
+  margin-top: 4px;
 }

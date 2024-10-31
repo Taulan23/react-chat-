@@ -36,15 +36,25 @@ function ProfileRoute() {
   };
 
   const handleSave = () => {
+    if (!mainAccount.name.trim()) {
+      return;
+    }
+    
+    if (!mainAccount.username.startsWith('@') || mainAccount.username.length < 6) {
+      return;
+    }
+
     saveMainAccount();
+    setTempAccount({...mainAccount});
+    setIsEdited(false);
   };
 
   const handleInputChange = (type, value) => {
     setIsEdited(true);
-    setMainAccount({
-      ...mainAccount,
+    setMainAccount(prev => ({
+      ...prev,
       [type]: value,
-    });
+    }));
   };
 
   return (
@@ -75,7 +85,7 @@ function AppContent() {
   };
 
   return (
-    <Routes>
+    <Routes basename="/chat-app-client">
       <Route
         path="/"
         element={

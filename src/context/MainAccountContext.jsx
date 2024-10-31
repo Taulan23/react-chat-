@@ -14,7 +14,8 @@ export const MainAccountProvider = ({ children }) => {
   });
 
   const saveMainAccount = () => {
-    saveMainAccountToStorage(mainAccount);
+    localStorage.setItem('mainAccount', JSON.stringify(mainAccount));
+    setMainAccount({...mainAccount});
   };
 
   return (

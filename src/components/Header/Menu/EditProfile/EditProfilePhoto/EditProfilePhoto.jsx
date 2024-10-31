@@ -1,45 +1,44 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./EditProfilePhoto.css";
 import { useMainAccount } from "../../../../../context/MainAccountContext";
 
-export default function EditProfilePhoto(props) {
-    const { mainAccount, setMainAccount, saveMainAccount } = useMainAccount();
+export default function EditProfilePhoto({ onPhotoChange }) {
+    const { mainAccount, setMainAccount } = useMainAccount();
     const [photoUrl, setPhotoUrl] = useState(mainAccount.avatar);
-  
-    useEffect(() => {
-      setPhotoUrl(mainAccount.avatar);
-    }, [mainAccount.avatar]);
   
     const handlePhotoChange = (e) => {
       const file = e.target.files[0];
       if (file) {
         const reader = new FileReader();
         reader.onloadend = () => {
-          setPhotoUrl(reader.result);
-          setMainAccount((prevAccount) => ({
-            ...prevAccount,
-            avatar: reader.result,
+          const newPhotoUrl = reader.result;
+          setPhotoUrl(newPhotoUrl);
+          setMainAccount(prev => ({
+            ...prev,
+            avatar: newPhotoUrl
           }));
-          saveMainAccount();
+          onPhotoChange();
         };
         reader.readAsDataURL(file);
       }
     };
   
     return (
-      <>
+      <div className="edit-profile-photo-container">
         <img
-          style={{ width: "250px", height: "250px" }}
-          src={photoUrl}
-          alt={"uthvfy"}
+          src={photoUrl || mainAccount.avatar}
+          alt="Profile"
           id="edit-profile-photo"
         />
+        <label className="photo-upload-label" htmlFor="photo-upload">
+          Изменить фото
+        </label>
         <input
-          className="edit-profile-photo"
+          id="photo-upload"
           type="file"
           accept="image/*"
           onChange={handlePhotoChange}
         />
-      </>
+      </div>
     );
-  }
+}

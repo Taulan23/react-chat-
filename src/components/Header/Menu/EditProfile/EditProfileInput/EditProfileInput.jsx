@@ -6,17 +6,19 @@ export default function EditProfileInput({
   inputvalue,
   title,
   onInputChange,
+  error
 }) {
   return (
-    <div className="input-group">
-      <label htmlFor={`edit-${type}`}>{title}</label>
+    <div className="edit-profile-input-container">
+      <span className="edit-profile-input-title">{title}</span>
       <input
-        id={`edit-${type}`}
         type="text"
+        className={`edit-profile-input ${error ? 'error' : ''}`}
         placeholder={placeholder}
         value={inputvalue}
         onChange={(e) => onInputChange(type, e.target.value)}
       />
+      {error && <span className="error-message">{error}</span>}
     </div>
   );
 }
